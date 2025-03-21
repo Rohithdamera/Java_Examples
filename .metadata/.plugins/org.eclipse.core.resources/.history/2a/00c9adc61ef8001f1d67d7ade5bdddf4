@@ -1,0 +1,113 @@
+package com.capgemini.cif.common.controller;
+
+import org.hibernate.HibernateException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotWritableException;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.HttpServerErrorException;
+
+import com.capgemini.cif.common.service.CifService;
+import com.capgemini.cif.common.util.CifException;
+import com.capgemini.cif.dim.service.DimService;
+import com.capgemini.cif.jaxb.LogProcessActivityErrorResponse;
+import com.capgemini.cif.jaxb.LogProcessActivityRequest;
+import com.capgemini.cif.jaxb.LogProcessActivityResponse;
+import com.capgemini.cif.jaxb.ProcessActivityHeaderType;
+
+@RestController
+@RequestMapping(RestUriConstants.DIM_CONTOLLER_PATH)
+public class DIMContoller {
+
+	@Autowired
+	private DimService dimService;
+
+	@Autowired
+	private CifService cifService;
+
+	@RequestMapping(value = RestUriConstants.DIM_PERSIST_PATH, method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody ResponseEntity<LogProcessActivityResponse> persistDimRecord(
+			@RequestBody LogProcessActivityRequest logProcessActivityRequest)
+			throws Exception {
+		LogProcessActivityResponse activityResponse = null;
+		HttpStatus status = null;
+		try {
+			activityResponse = dimService
+					.persistDimRecord(logProcessActivityRequest);
+			status = HttpStatus.CREATED;
+		}catch (CifException ex){
+			activityResponse = getExceptionResponse(ex,activityResponse,logProcessActivityRequest);
+			status=HttpStatus.OK;
+			ex.printStackTrace(System.err);
+		}
+		
+		catch(DataAccessException ex){//null value
+			activityResponse = getExceptionResponse(ex,activityResponse,logProcessActivityRequest);
+			status=HttpStatus.OK;
+			ex.printStackTrace(System.err);
+		}
+		
+		catch(HibernateException ex){
+			activityResponse = getExceptionResponse(ex,activityResponse,logProcessActivityRequest);
+			status=HttpStatus.OK;
+			ex.printStackTrace(System.err);
+		}
+		
+		catch (Exception ex) {
+			activityResponse = getExceptionResponse(ex,activityResponse,logProcessActivityRequest);
+			status=HttpStatus.INTERNAL_SERVER_ERROR;
+			ex.printStackTrace(System.err);
+		}
+	return new ResponseEntity<LogProcessActivityResponse>(activityResponse,status);
+	}
+
+	private LogProcessActivityResponse getExceptionResponse(Exception ex,
+			LogProcessActivityResponse activityResponse,
+			LogProcessActivityRequest logProcessActivityRequest) {
+		ProcessActivityHeaderType headerType = logProcessActivityRequest
+				.getProcessActivityHeader();
+		if (activityResponse != null) {
+			cifService.logException(ex, "logProcessActivity",
+					activityResponse.getProcessActivityHeaderId(),
+					headerType.getOrganizationId(),
+					headerType.getProcessId(),
+					headerType.getSourceSystemId());
+			
+			String errorMessage = ex.getMessage();
+			
+			activityResponse.setMessage(errorMessage);
+			activityResponse.setProcessId(headerType.getProcessId());
+			activityResponse.setSourceSystemId(headerType.getSourceSystemId());
+			activityResponse.setDestinationSystemId(headerType.getDestinationSystemId());
+			
+		} else {
+			cifService.logException(ex, "logProcessActivity", 
+					headerType.getProcessActivityHeaderId(),
+					headerType.getOrganizationId(),
+					headerType.getProcessId(),
+					headerType.getSourceSystemId());
+			
+			LogProcessActivityResponse actRes = new LogProcessActivityResponse();
+			String errorMessage = ex.getMessage();
+			
+			actRes.setMessage(errorMessage);
+			actRes.setProcessActivityHeaderId(headerType.getProcessActivityHeaderId());
+			actRes.setProcessId(headerType.getProcessId());
+			actRes.setSourceSystemId(headerType.getSourceSystemId());
+			actRes.setDestinationSystemId(headerType.getDestinationSystemId());
+			
+			activityResponse = actRes;		
+			
+		}
+		
+		return activityResponse;
+	}
+
+}

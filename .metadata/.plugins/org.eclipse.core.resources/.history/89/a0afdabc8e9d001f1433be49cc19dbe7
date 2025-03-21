@@ -1,0 +1,10 @@
+package com.employee_project.EMS_Backend.Service;
+
+import com.employee_project.EMS_Backend.dto.EmployeeDto;
+
+public interface EmployeeService {
+	EmployeeDto createEmployee(EmployeeDto employeDto);
+	
+	EmployeeDto getEmployeeById(Long employeeId );
+
+}

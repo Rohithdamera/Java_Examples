@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\rdamera\Downloads\PromotionFInder"/>
+			<item value="C:\Users\rdamera\Downloads\Promotion_Finder_BackEnd-main (1)\Promotion_Finder_BackEnd-main"/>
+			<item value="C:\Users\rdamera\Downloads\Promotion_Finder_BackEnd-main"/>
+			<item value="C:\Users\rdamera\Downloads\Promotion_Finder_BackEnd-main (1)"/>
+			<item value="C:\Users\rdamera\Downloads\EMS_Backend (2)\EMS_Backend (1)\EMS_Backend"/>
+			<item value="C:\Users\rdamera\Downloads\EMS_Backend (2)"/>
+			<item value="C:\Users\rdamera\Downloads\EMS_backend"/>
+			<item value="C:\Users\rdamera\Downloads\restful"/>
+			<item value="C:\Users\rdamera\Downloads\first_example"/>
+			<item value="C:\Users\rdamera\Downloads\first_example\first_example"/>
+			<item value="C:\Users\rdamera\Documents\workspace-spring-tool-suite-4-4.20.1.RELEASE\Mentors_MS"/>
+			<item value="C:\Users\rdamera\Documents\workspace-spring-tool-suite-4-4.20.1.RELEASE\Mentors_spring_boot"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

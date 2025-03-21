@@ -1,0 +1,5 @@
+package com.employee_project.EMS_Backend.Exception;
+
+public class customexception {
+
+}

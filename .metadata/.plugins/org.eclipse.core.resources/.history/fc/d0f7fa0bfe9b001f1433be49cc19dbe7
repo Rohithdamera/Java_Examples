@@ -1,0 +1,25 @@
+package com.employee_project.EMS_Backend.EmployeeMapper;
+
+import com.employee_project.EMS_Backend.Entity.Employee;
+import com.employee_project.EMS_Backend.dto.EmployeeDto;
+
+public class EmployeeMapper {
+
+	public static EmployeeDto mapToEmployeDto(Employee employee) {
+		return new EmployeeDto(
+				employee.getId(),
+				employee.getFirstname(),
+				employee.getLastname(),
+				employee.getEmail()
+				);
+	}
+	public static Employee maptoemployee(EmployeeDto employeeDto) {
+		return new Employee(
+				employeeDto.getId(),
+				employeeDto.getFirstname(),
+				employeeDto.getLastname(),
+				employeeDto.getEmail()
+				);
+		
+	}
+}

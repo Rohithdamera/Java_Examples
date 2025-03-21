@@ -1,0 +1,46 @@
+package com.employee_project.EMS_Backend.Service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import java.util.stream.Collectors;
+
+import com.employee_project.EMS_Backend.Entity.Employee;
+import com.employee_project.EMS_Backend.Exception.ResourceNotFoundException;
+import com.employee_project.EMS_Backend.Mapper.EmployeeMapper;
+import com.employee_project.EMS_Backend.dto.EmployeeDto;
+import com.employee_project.EMS_Backend.repository.Employee_Repository;
+
+@Service
+
+public class EmployeeServiceImpl implements EmployeeService  {
+
+	@Autowired
+	private  Employee_Repository employeeRepository;
+	
+//	 public EmployeeServiceImpl(Employee_Repository employeeRepository) {
+//	        this.employeeRepository = employeeRepository;
+//	    }
+	@Override
+	public EmployeeDto createEmployee(EmployeeDto employeeDto) {
+		
+		Employee employee = EmployeeMapper.maptoemployee(employeeDto);
+		Employee savedemployee= employeeRepository.save(employee);
+		return EmployeeMapper.mapToEmployeDto(savedemployee);
+	}
+
+	@Override
+	public EmployeeDto getEmployeeById(Long employeeId) {
+		Employee employee= employeeRepository.findById(employeeId).orElseThrow(()-> new ResourceNotFoundException ("resource not found with given id" +employeeId));
+		return EmployeeMapper.mapToEmployeDto(employee);
+	}
+
+	@Override
+	public List<EmployeeDto> getallemployee() {
+		List<Employee> employees = employeeRepository.findAll();
+		return employees.stream().map( EmployeeMapper::mapToEmployeeDto).collect(Collectors.toList());
+		
+	}
+
+}

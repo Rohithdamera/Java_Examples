@@ -1,0 +1,57 @@
+package com.employee_project.EMS_Backend.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.employee_project.EMS_Backend.Service.DepartmentService;
+import com.employee_project.EMS_Backend.dto.DepartmentDto;
+
+@RestController
+@RequestMapping("/api/department")
+public class DepartmentController {
+	
+	
+	@Autowired
+	private DepartmentService departmentService;
+	
+	@PostMapping
+	public ResponseEntity<DepartmentDto>createDepartment(@RequestBody DepartmentDto departmentdto){
+		DepartmentDto savedDepartment=departmentService.createDepartment(departmentdto);
+		return new ResponseEntity<>(savedDepartment, HttpStatus.CREATED);
+	}
+	
+	
+	@GetMapping
+	public ResponseEntity<List<DepartmentDto>> getallDepartments(){
+		List<DepartmentDto> DepartmentList= departmentService.getallDepartments();
+		return new ResponseEntity <> (DepartmentList,HttpStatus.FOUND);
+		
+	}
+	
+	@GetMapping("{id}")
+	public ResponseEntity<DepartmentDto> getbyid(@PathVariable("id") Long Departmentid){
+		DepartmentDto departmentDto=departmentService.getbyid(Departmentid);
+		return ResponseEntity.ok(departmentDto);
+		
+	}
+	
+	
+	@PutMapping("{id}")
+	public ResponseEntity<DepartmentDto> updateDepartment(@PathVariable ("id") Long Departmentid , @RequestBody DepartmentDto updateDepartment){
+		DepartmentDto departmentDto=departmentService.updateDepartment(Departmentid, updateDepartment);
+		return new ResponseEntity<>(departmentDto,HttpStatus.OK);
+		
+	}
+	
+
+}

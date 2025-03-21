@@ -1,0 +1,176 @@
+Java 8 Stream API's  https://youtu.be/KGvmG6sxMds?si=2_osTP7XZvQUlSaC
+Java notes:
+https://www.youtube.com/playlist?list=PL6W8uoQQ2c63f469AyV78np0rbxRFppkx
+ 
+string buffer and builder
+ 
+Java 11 features -> https://www.youtube.com/watch?v=4EBA7xyw4rI&ab_channel=AshokIT
+Java 17 features -> https://www.youtube.com/watch?v=6zmjg_ZEoH8&ab_channel=Geekific
+ 
+ 
+SQL -> https://www.youtube.com/watch?v=yMqldbY2AAg&ab_channel=ByteByteGo - done
+https://youtu.be/LsRagOpaXEg?si=tfSVWZn0HHYhHa7z - done
+https://www.youtube.com/watch?v=RZc4QSRRk98&ab_channel=CrackConcepts - done
+ 
+ 
+Hibernate -> https://www.youtube.com/playlist?list=PLsyeobzWxl7qBZtsEvp_n2A7sJs2MpF3r - done
+https://www.youtube.com/watch?v=yRlkCuN07c8&ab_channel=in28minutes-GetCloudCertified - done
+ 
+ 
+Spring, spring jdbc, spring mvc: https://www.youtube.com/playlist?list=PLlhM4lkb2sEgJDGj2zOJnp0y5A5E6li1k
+https://youtu.be/D6MO62aJ_-k?si=awiOdZ8h_rDOEEj9
+ 
+Annotations and types: https://www.geeksforgeeks.org/spring-framework-annotations/?ref=lbp
+ 
+Spring boot exception handling : https://www.youtube.com/watch?v=gPnd-hzM_6A&ab_channel=JavaTechie
+https://www.youtube.com/watch?v=zTAHY0SLQAg&ab_channel=in28minutes-GetCloudCertified - done
+ 
+ 
+Spring jpa: https://www.youtube.com/playlist?list=PLGRDMO4rOGcPtMMl1DD2cu3GBPZloHOS_  - done
+ 
+Spring security: https://www.youtube.com/watch?v=h-9vhFeM3MY&t=105s&ab_channel=Amigoscode
+https://www.youtube.com/watch?v=_GSHvvken2k&ab_channel=SergeyTech
+https://www.youtube.com/watch?v=us0VjFiHogo&ab_channel=DanVega
+https://youtu.be/b9O9NI-RJ3o?si=XAekCT0nYvfm5IGx
+ 
+ 
+spring AOP: https://www.youtube.com/watch?v=Og9Fyew8ltQ&ab_channel=in28minutes-GetCloudCertified
+https://youtu.be/HhsAw8GVogQ?si=BIq6sw8Okvz5s4Td
+ 
+ 
+SPring batch: https://www.youtube.com/watch?v=eohUc-kRUPw&ab_channel=in28minutes-GetCloudCertified
+https://www.youtube.com/watch?v=16bq_N55f_s&ab_channel=TechPrimers
+ 
+ 
+REST api:
+spring boot and rest : https://youtu.be/gPnd-hzM_6A?si=BAb-GOJTQDlBwgob
+https://youtu.be/ECAhXdFrBaE?si=E4AY2lGK0mkCei_m
+https://youtu.be/_S013liiM8s?si=EggFxiwXD2aF4GNC
+https://youtu.be/jo6IEX-v3LM?si=xa9oA63ilUcEXKaQ
+https://youtu.be/fzTl-Dr99aw?si=_fqRVcjf-vxXxqX5
+https://youtu.be/ECAhXdFrBaE?si=e2q6LPVKOvvmews3
+ 
+ 
+Kafka: https://youtu.be/rVqAoUIPO7I?si=b26sqbRiM9CNXMMj
+Avro and schema register: https://youtu.be/u0kRK-qbopk?si=GSdsZMWK1arJREmj
+Retry and exception handling: https://youtu.be/aNBSd7T-RGA?si=uxFdewZc1lD7KxZN
+https://youtu.be/x4k1XEjNzYQ?si=udE8QYkbmTuKO1ZJ
+https://youtu.be/_5mu7lZz5X4?si=lXiSCbFkBdnAtXZ_
+ 
+Graphql and spring boot: https://youtu.be/GJc36OKFQ_M?si=fGsTYX3V7rbAxTF6
+ 
+Swagger plus spring boot: https://youtu.be/rsAigwGmTf8?si=O_e-oUJLxtpk7Y32
+ 
+JWT plus spring boot : https://youtu.be/X80nJ5T7YpE?si=eOflqi-UZ6ohJ1Yk
+https://youtu.be/GH7L4D8Q_ak?si=zM0Q-D4bC0YXgmoE
+https://youtu.be/KxqlJblhzfI?si=XjbCzbyrcAhV3pff
+ 
+SPring framework 6 and spring boot 3: https://youtu.be/haVMaDiAGSw?si=eemMwR04P4BdGSYU
+https://youtu.be/WJutdzX9hl0?si=D99hZ5Ab8Ws4jOv9
+https://youtu.be/btvh21K3yvU?si=sgsQeySJWozyngkP
+https://youtu.be/BWaQFX79vO8?si=-0N3q102FMPZg5cl
+https://youtu.be/4_jey1hfEw0?si=6d-eE4KFXEFJp5FA
+ 
+ 
+ACID: https://youtu.be/-GS0OxFJsYQ?si=j4IXeRj6gyl4P2Na - done
+https://youtu.be/GAe5oB742dw?si=T4usQDc4uo4e8U87 - done
+CAP: https://youtu.be/BHqjEjzAicA?si=HWHhBt-LxzkW-KN9 - done
+BASE: https://youtu.be/l8SoqbLNN7Q?si=-1fLOty8fLolY15u - done
+ 
+ 
+Docker:
+https://youtu.be/52SmfrVctB0?si=tZB410fRMsqjna_X
+ 
+Kubernetes:
+https://youtu.be/TlHvYWVUZyc?si=o2XX-9tOibR5TTYG
+https://youtu.be/umXEmn3cMWY?si=x30f8wlyMq-IAOAh
+https://youtu.be/F4U1KsTnVyQ?si=EVgPurFt-lT4lNar
+https://youtu.be/RQbc_Yjb9ls?si=MkTL2N1ay8EomX7S
+https://youtu.be/GhZi4DxaxxE?si=bFU_37QPAVURTgEX
+ 
+Micorservices:
+ 
+https://youtu.be/lTAcCNbJ7KE?si=Q1S9pGZcJsGdrm6n
+https://youtu.be/lL_j7ilk7rc?si=QVcLjlJ60dCg9KoI
+https://youtu.be/f9TLjSA9dBs?si=BRsyp5BRChmUE_St
+https://www.udemy.com/course/understanding-microservices-architecture/
+ 
+API gateway:
+https://youtu.be/6ULyxuHKxg8?si=3XpgxJzTj7oiPkEp
+https://youtu.be/2q1MlfFhWhQ?si=cgtbx0WMRMpphj9X
+https://youtu.be/b4koVYp2FE8?si=My4FvE9O1ZaVzSLJ
+https://youtu.be/6Ts4UdbIs-o?si=UHhzD8xwk0j2IMb5
+https://youtu.be/qODoDq5_hAM?si=HglPvdx98mWFNXwV
+ 
+Service registry:
+https://youtu.be/lUC7fBYwXOs?si=4_0XjkyZuBI0SD0T
+https://www.youtube.com/watch?v=EeQRAxXWDF4&t=28192s&ab_channel=EmbarkX%7CLearnProgramming
+ 
+API vs loadbalancing:
+https://youtu.be/L9QRsb0oLv4?si=8DxzYRGP4dOXnAJ-
+ 
+Admin server:
+https://youtu.be/pVe_fye2Ge0?si=6bA1yFF4KOupwvtd
+ 
+Zipkin vs jaeger:
+https://youtu.be/lJ_XAol-OKM?si=AGDBm24wyn1dd4S2
+ 
+security with jwt and keycloak:
+https://youtu.be/MWvnmyLRUik?si=YvC2VHxciYHkmkqv
+https://youtu.be/qODoDq5_hAM?si=hYJgxF6iH8Z391gk
+https://youtu.be/KpITcN7O53Y?si=0xlSP9i4I5XTgzmL
+ 
+Config server:
+https://youtu.be/ArOV5VIShq0?si=Mjs0D9-A9P2tzBCW
+https://youtu.be/kq8rVPnWiBY?si=DkqBV2Pc2V_nYIPm
+ 
+feign client:
+https://youtu.be/_MMf2SvNqxo?si=uPqFfNU0nBlEEdwx
+https://youtu.be/GpqnYd8VR3k?si=Po3zj5k-V3GuMQUo
+ 
+ 
+logging:
+https://youtu.be/M19XC0zJUrA?si=VxPn_t8zlWyIUX87
+ 
+SPring cloud config server:
+ 
+ 
+ 
+design patterns:
+https://youtu.be/aOen1-pQLZg?si=pKIhpksYT6pzPQrP
+https://youtu.be/qGlUKtjqaEQ?si=aHpBNQnVTY6IrSAE
+https://youtu.be/b6R4dElDtRc?si=MqdqWShRFIEa1KbU
+https://youtu.be/5YLpjPmsPCA?si=WgH8zdLG99mLMzwT
+https://youtu.be/M-Fhb8LzhPo?si=Dqk5uNVxfLWKS4yS
+https://dev.to/somadevtoo/19-microservices-patterns-for-system-design-interviews-3o39
+ 
+ 
+SAGA design pattern:
+ 
+https://youtu.be/Fe_qPM81hJ8?si=MFVIKmZmQ_lV9GrK
+https://youtu.be/aOen1-pQLZg?si=DC8PytqTg4uNQxVs
+ 
+CQRS: https://youtu.be/fzGZPf0FMao?si=33-zyAhfBbDI34B1
+ 
+ 
+Prometheues
+https://www.youtube.com/watch?v=2wr9njNdywk&ab_channel=JavaTechie
+ 
+datadog:
+https://youtu.be/7T7SyMZihwo?si=pitvrTm47VvtCpMD
+ 
+ 
+AWS notes revision
+ 
+HLD:
+https://www.youtube.com/playlist?list=PL6W8uoQQ2c63W58rpNFDwdrBnq5G3EfT7
+ 
+LLD:
+https://www.youtube.com/playlist?list=PL6W8uoQQ2c61X_9e6Net0WdYZidm7zooW
+ 
+roadmap:
+https://roadmap.sh/system-design
+ 
+ 
+AWS EKS:
+https://youtu.be/z8qDyO8F3XQ?si=RKxxiNShXLDEguiW
